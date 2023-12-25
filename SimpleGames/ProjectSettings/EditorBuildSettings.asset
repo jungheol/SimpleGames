@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BubbleGameScene.unity
+    path: Assets/Scenes/IntroScene.unity
+    guid: cf145924b0d0145758c18450b6364162
+  - enabled: 1
+    path: Assets/Scenes/BoxDefense.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/HungryCat.unity
+    guid: 4b500a4f3261846c29cace5054def87d
+  - enabled: 1
+    path: Assets/Scenes/FindCard.unity
+    guid: f50f9ebb8ff95488b8e78fdadcffe7bf
+  - enabled: 1
+    path: Assets/Scenes/RainDrop.unity
+    guid: ec24c7a83da6642e1a1b20e92cc71ffb
   m_configObjects: {}
