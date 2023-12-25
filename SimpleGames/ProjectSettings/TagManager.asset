@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bubble
   - Food
+  - Ground
+  - Character
   layers:
   - Default
   - TransparentFX
