@@ -82,7 +82,7 @@ public class HungryCatManager : MonoBehaviour {
     }
 
     public void RetryGame() {
-        SceneManager.LoadScene((int)TopManager.SceneName.DEFENSEFISHSHOP);
+        SceneManager.LoadScene((int)TopManager.SceneName.HUNGRYCAT);
     }
     
     public void MoveIntroScene() {
