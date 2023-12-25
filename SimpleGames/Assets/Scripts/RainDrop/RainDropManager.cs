@@ -10,9 +10,9 @@ public class RainDropManager : MonoBehaviour {
 	public GameObject rain;
 	public GameObject panel;
 	public Text scoreText;
+	public Text timeText;
 	public Text bestScore;
 	public Text thisScore;
-	public Text timeText;
     
 	private int totalScore = 0;
 	private float limit = 30.0f;
@@ -22,12 +22,12 @@ public class RainDropManager : MonoBehaviour {
 	}
 
 	// Start is called before the first frame update
-	void Start() {
+	private void Start() {
 		InvokeRepeating("MakeRain", 0, 0.5f);
 		initGame();
 	}
     
-	void initGame() {
+	private void initGame() {
 		Time.timeScale = 1.0f;
 		totalScore = 0;
 		limit = 30.0f;
@@ -37,11 +37,11 @@ public class RainDropManager : MonoBehaviour {
 		limit -= Time.deltaTime;
 		timeText.text = limit.ToString("N2");
 		if(limit < 0) {
-			EndGame();
+			GameOver();
 		}
 	}
 
-	void MakeRain() {
+	private void MakeRain() {
 		Instantiate(rain);
 	}
 
@@ -50,7 +50,7 @@ public class RainDropManager : MonoBehaviour {
 		scoreText.text = totalScore.ToString();
 	}
 
-	void EndGame() {
+	private void GameOver() {
 		panel.SetActive(true);
 		limit = 0.0f;
 		Time.timeScale = 0.0f;
