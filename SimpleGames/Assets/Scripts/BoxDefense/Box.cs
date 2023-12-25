@@ -7,8 +7,8 @@ using Random = UnityEngine.Random;
 public class Box : MonoBehaviour {
 
     public Sprite[] boxSpirtes;
-
-    void Start() {
+    
+    private void Start() {
         float x = Random.Range(-2.5f, 2.5f);
         float y = Random.Range(4.0f, 5.0f);
 
@@ -19,7 +19,11 @@ public class Box : MonoBehaviour {
         transform.localScale = new Vector3(size, size, 1);
     }
 
-    void Update() {
+    private void Update() {
         if(transform.position.y < -5.0f) Destroy(gameObject); 
+    }
+    
+    private void OnCollisionEnter2D(Collision2D coll) {
+        if (coll.gameObject.tag == "Bubble") BoxDefenseManager.instance.GameOver();
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class BoxDefenseManager : MonoBehaviour {
 
+    public static BoxDefenseManager instance;
     public GameObject box;
     public GameObject endPanel;
     public Text timeText;
@@ -16,16 +17,19 @@ public class BoxDefenseManager : MonoBehaviour {
     private float bubbleAlive = 0f;
     private bool isRunning = true;
     
-    void Start() {
+    private void Awake() {
+        instance = this;
+    }
+    private void Start() {
         Time.timeScale = 1.0f;
         InvokeRepeating("MakeBox", 0.0f, 0.5f);
     }
     
-    void MakeBox() {
+    private void MakeBox() {
         Instantiate(box);
     }
 
-    void Update() {
+    private void Update() {
         if (isRunning) {
             bubbleAlive += Time.deltaTime;
             timeText.text = bubbleAlive.ToString("N2");
@@ -57,7 +61,7 @@ public class BoxDefenseManager : MonoBehaviour {
         SceneManager.LoadScene((int)TopManager.SceneName.INTROSCENE);
     }
 
-    void TimeStop() {
+    private void TimeStop() {
         Time.timeScale = 0.0f;
     }
 }
