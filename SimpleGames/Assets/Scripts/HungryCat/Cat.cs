@@ -39,7 +39,7 @@ public class Cat : MonoBehaviour {
                 transform.position += new Vector3(0.0f, -0.2f, 0.0f);
             }
 
-            if (transform.position.y < -16.0f) DefenseFishShopManager.instance.GameOver();
+            if (transform.position.y < -16.0f) HungryCatManager.instance.GameOver();
             
         } else {
             if (transform.position.x > 0) {
@@ -59,7 +59,7 @@ public class Cat : MonoBehaviour {
                 gameObject.transform.Find("Hungry/Canvas/Front").transform.localScale = new Vector3(energy / full, 1.0f, 1.0f);
             } else {
                 if (isFull == false) {
-                    DefenseFishShopManager.instance.AddCat(score);
+                    HungryCatManager.instance.AddCat(score);
                     gameObject.transform.Find("Hungry").gameObject.SetActive(false);  
                     gameObject.transform.Find("Full").gameObject.SetActive(true);
                     isFull = true;
