@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class DefenseFishShopManager : MonoBehaviour {
+public class HungryCatManager : MonoBehaviour {
     
-    public static DefenseFishShopManager instance;
+    public static HungryCatManager instance;
     public GameObject dog;
     public GameObject food;
     public GameObject normalCat;
