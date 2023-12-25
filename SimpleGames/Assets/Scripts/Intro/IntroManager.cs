@@ -6,19 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class IntroManager : MonoBehaviour {
 
-	public void MoveBubbleGameScene() {
+	public void MoveBoxDefenseScene() {
 		SceneManager.LoadScene((int)TopManager.SceneName.BOXDEFENSE);
 	}
 
-	public void MoveDogvsCatGameScene() {
+	public void MoveHungryCatScene() {
 		SceneManager.LoadScene((int)TopManager.SceneName.HUNGRYCAT);
 	}
 
-	public void MoveFindCardGameScene() {
+	public void MoveFindCardScene() {
 		SceneManager.LoadScene((int)TopManager.SceneName.FINDCARD);
 	}
 
-	public void MoveRainDropGameScene() {
+	public void MoveRainDropScene() {
 		SceneManager.LoadScene((int)TopManager.SceneName.RAINDROP);
 	}
 }
