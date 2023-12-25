@@ -33,13 +33,13 @@ public class FindCardManager : MonoBehaviour {
         
         for (int i = 0; i < 16; i++) {
             GameObject newCard = Instantiate(card);
-            newCard.transform.parent = GameObject.Find("Duck").transform;
+            newCard.transform.parent = GameObject.Find("Cards").transform;
             
             float x = (i / 4) * 1.4f - 2.1f;
             float y = (i % 4) * 1.4f - 3.0f;
             newCard.transform.position = new Vector3(x, y, 0);
 
-            string cardName = "card" + cards[i].ToString();
+            string cardName = "Duck" + cards[i].ToString();
             newCard.transform.Find("Front").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(cardName);
         }
     }
