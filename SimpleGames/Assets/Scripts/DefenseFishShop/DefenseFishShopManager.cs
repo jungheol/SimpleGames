@@ -29,7 +29,7 @@ public class DefenseFishShopManager : MonoBehaviour {
 
     private void Start() {
         Time.timeScale = 1.0f;
-        InvokeRepeating("MakeFood", 0.0f, 0.5f);
+        InvokeRepeating("MakeFood", 0.0f, 0.1f);
         InvokeRepeating("MakeCat", 0.0f, 1.0f);
     }
 
