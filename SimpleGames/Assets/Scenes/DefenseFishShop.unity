@@ -1083,8 +1083,8 @@ MonoBehaviour:
   dog: {fileID: 899265626}
   food: {fileID: 100539763338440989, guid: 7a1d11daa612045739da571b6e26660c, type: 3}
   normalCat: {fileID: 1806177477781328325, guid: e504f2d62531d43e59da7d8d5b4146b2, type: 3}
-  fatCat: {fileID: 1806177477781328325, guid: e504f2d62531d43e59da7d8d5b4146b2, type: 3}
-  pirateCat: {fileID: 1806177477781328325, guid: e504f2d62531d43e59da7d8d5b4146b2, type: 3}
+  fatCat: {fileID: 1806177477781328325, guid: 309ea6d9792bb4773ae21a53594d2eea, type: 3}
+  pirateCat: {fileID: 1806177477781328325, guid: 13043404087394326aa3350f26aaabde, type: 3}
   endPanel: {fileID: 1025582858}
   levelText: {fileID: 1281797129}
   scoreText: {fileID: 2097818562}
