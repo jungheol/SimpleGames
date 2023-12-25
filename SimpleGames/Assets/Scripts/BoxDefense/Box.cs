@@ -15,7 +15,7 @@ public class Box : MonoBehaviour {
         transform.position = new Vector3(x, y, 0);
 
         this.gameObject.GetComponent<SpriteRenderer>().sprite = boxSpirtes[Random.Range(0, 6)];
-        float size = Random.Range(2.5f, 5.5f);
+        float size = Random.Range(0.7f, 1.4f);
         transform.localScale = new Vector3(size, size, 1);
     }
 
