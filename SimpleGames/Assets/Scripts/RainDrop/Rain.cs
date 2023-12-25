@@ -15,18 +15,18 @@ public class Rain : MonoBehaviour {
 	private float size;
 	private int score;
     
-	void Start() {
+	private void Start() {
 		SetPosition();
 		SetType();
 	}
 
-	void SetPosition() {
+	private void SetPosition() {
 		float x = Random.Range(-2.7f, 2.7f);
 		float y = Random.Range(3.0f, 5.0f);
 		transform.position = new Vector3(x, y, 0);
 	}
 
-	void SetType() {
+	private void SetType() {
 		rainType = (RainType)Random.Range(0, 4);
 
 		switch (rainType) {
@@ -54,10 +54,8 @@ public class Rain : MonoBehaviour {
 		transform.localScale = new Vector3(size, size, 0);
 	}
     
-	void OnTriggerEnter2D(Collider2D coll) {
-		if (coll.gameObject.tag == "Ground") {
-			Destroy(gameObject);
-		}
+	private void OnTriggerEnter2D(Collider2D coll) {
+		if (coll.gameObject.tag == "Ground") Destroy(gameObject);
 
 		if (coll.gameObject.tag == "Character") {
 			RainDropManager.instance.AddScore(score);
