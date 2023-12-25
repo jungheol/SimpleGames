@@ -6,7 +6,7 @@ public class TopManager : MonoBehaviour {
     public enum SceneName {
         INTROSCENE = 0,
         BOXDEFENSE,
-        DOGVSCAT,
+        DEFENSEFISHSHOP,
         FINDCARD,
         RAINDROP,
     }
