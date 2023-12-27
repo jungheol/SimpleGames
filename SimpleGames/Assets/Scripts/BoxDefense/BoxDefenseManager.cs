@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class BoxDefenseManager : MonoBehaviour {
+public class BoxDefenseManager : TopGameManager {
 
+    protected override string gameSceneName => "BoxDefense";
     public static BoxDefenseManager instance;
     public GameObject box;
     public GameObject endPanel;
@@ -52,10 +53,15 @@ public class BoxDefenseManager : MonoBehaviour {
 
         bestScoreText.text = PlayerPrefs.GetFloat("BubbleBest").ToString("N2");
     }
-    
-    public void RetryGame() {
+
+    public void ShowAd() {
+        AdsManager.Instance.ShowAdIfAvailable(this);
+    }
+
+    protected internal override void RetryGame() {
         SceneManager.LoadScene((int)TopManager.SceneName.BOXDEFENSE);
     }
+    
 
     public void MoveIntroScene() {
         SceneManager.LoadScene((int)TopManager.SceneName.INTROSCENE);
