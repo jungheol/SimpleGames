@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class HungryCatManager : MonoBehaviour {
+public class HungryCatManager : TopGameManager {
     
     public static HungryCatManager instance;
     public GameObject dog;
@@ -81,7 +81,11 @@ public class HungryCatManager : MonoBehaviour {
         scoreText.text = totalScore.ToString();
     }
 
-    public void RetryGame() {
+    public void ShowAd() {
+        AdsManager.Instance.ShowAdIfAvailable(this);
+    }
+
+    protected internal override void RetryGame() {
         SceneManager.LoadScene((int)TopManager.SceneName.HUNGRYCAT);
     }
     

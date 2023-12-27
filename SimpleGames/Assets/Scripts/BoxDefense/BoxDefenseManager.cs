@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class BoxDefenseManager : TopGameManager {
 
-    protected override string gameSceneName => "BoxDefense";
     public static BoxDefenseManager instance;
     public GameObject box;
     public GameObject endPanel;

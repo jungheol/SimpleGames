@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TopGameManager : MonoBehaviour {
 	
-	protected virtual string gameSceneName => "";
 	protected internal virtual void RetryGame() {
 		
 	}
