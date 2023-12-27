@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class RainDropManager : MonoBehaviour {
+public class RainDropManager : TopGameManager {
     
 	public static RainDropManager instance;
 	public GameObject rain;
@@ -65,7 +65,11 @@ public class RainDropManager : MonoBehaviour {
 		bestScore.text = PlayerPrefs.GetInt("RainBest").ToString();
 	}
 
-	public void RetryGame() {
+	public void ShowAd() {
+		AdsManager.Instance.ShowAdIfAvailable(this);
+	}
+
+	protected internal override void RetryGame() {
 		SceneManager.LoadScene((int)TopManager.SceneName.RAINDROP);
 	}
     
