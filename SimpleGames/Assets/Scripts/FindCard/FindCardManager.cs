@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-public class FindCardManager : MonoBehaviour {
+public class FindCardManager : TopGameManager {
     
     public static FindCardManager instance;
     public int openCount = 0;
@@ -98,7 +98,11 @@ public class FindCardManager : MonoBehaviour {
         Time.timeScale = 0f;
     }
 
-    public void RetryGame() {
+    public void ShowAd() {
+        AdsManager.Instance.ShowAdIfAvailable(this);
+    }
+
+    protected internal override void RetryGame() {
         SceneManager.LoadScene((int)TopManager.SceneName.FINDCARD);
     }
     

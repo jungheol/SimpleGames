@@ -767,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4666494507567313542, guid: bcb3cce093d194ec4b73c6592955aa53, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RetryGame
+      value: ShowAd
       objectReference: {fileID: 0}
     - target: {fileID: 4666494507567313542, guid: bcb3cce093d194ec4b73c6592955aa53, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
